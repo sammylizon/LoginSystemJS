@@ -1,10 +1,10 @@
 const fakeUsers = [
     {
-        username : 'Timothy',
+        username : 'Becks',
         password : 'password'
     },
     {
-        username : 'Laura',
+        username : 'Junez',
         password : 'password2'
     }
 ]
@@ -15,17 +15,27 @@ const btn = document.querySelector("button");
 const userInputUsername = document.getElementById("username").value;
 const userInputPassword = document.getElementById("password").value;
 
+console.log(`Pass: ${userInputPassword}, User: ${userInputUsername}`);
+
 
 
 function getInfo(){
-    btn.onclick = () => {
-        if(userInputUsername == fakeUsers[0].username && userInputPassword == fakeUsers[0].password){
+    const userInputUsername = document.getElementById("username").value;
+    const userInputPassword = document.getElementById("password").value;
+
+    console.log(`Pass: ${userInputPassword}, User: ${userInputUsername}`);
+
+    //create a forloop that iterates through the users
+    for(let i = 0; i < fakeUsers.length; i++)
+        {
+            if(userInputUsername == fakeUsers[i].username && userInputPassword == fakeUsers[i].password){
             window.location.href = "https://www.google.com";
             return;
-        } else {
-            alert("WRONG PASSWORD!!!! Scammer Alert");
-            console.log(`Username: ${userInputUsername}, Password: ${userInputPassword}`);
+            }
         }
         
-    }
-};
+        alert("WRONG PASSWORD!!!! Scammer Alert");
+        console.log(`Username: ${userInputUsername}, Password: ${userInputPassword}`);
+
+        
+    };
