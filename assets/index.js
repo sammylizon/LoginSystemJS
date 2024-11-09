@@ -15,9 +15,6 @@ const btn = document.querySelector("button");
 const userInputUsername = document.getElementById("username").value;
 const userInputPassword = document.getElementById("password").value;
 
-console.log(`Pass: ${userInputPassword}, User: ${userInputUsername}`);
-
-
 
 function getInfo(){
     const userInputUsername = document.getElementById("username").value;
@@ -33,8 +30,8 @@ function getInfo(){
             return;
             }
         }
-        
-        alert("WRONG PASSWORD!!!! Scammer Alert");
+
+        alert("🚨🚨🚨");
         console.log(`Username: ${userInputUsername}, Password: ${userInputPassword}`);
 
         
